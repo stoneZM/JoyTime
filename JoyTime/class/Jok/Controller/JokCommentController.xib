@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokCommentController">
+            <connections>
+                <outlet property="commentTf" destination="h8a-82-gjx" id="2RJ-uC-6tQ"/>
+                <outlet property="tableView" destination="OHh-vW-gQc" id="tqq-C8-QpK"/>
+                <outlet property="textFieldBottomCons" destination="XUZ-mf-ZcL" id="dbI-Y8-ADO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wEk-ow-e7i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OHh-vW-gQc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9wv-Nv-z72"/>
+                        <outlet property="delegate" destination="-1" id="Nre-YK-xOw"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-eZ-zrK">
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我也来评论一下..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8a-82-gjx">
+                            <rect key="frame" x="20" y="5" width="290" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="4Xo-eo-ANe"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX2-nn-bBX">
+                            <rect key="frame" x="315" y="5" width="50" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="vUc-uz-sws"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sendCommentBtn:" destination="-1" eventType="touchUpInside" id="z7x-W9-yZY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="h8a-82-gjx" firstAttribute="leading" secondItem="e4j-eZ-zrK" secondAttribute="leading" constant="20" id="2b9-IX-5wc"/>
+                        <constraint firstItem="h8a-82-gjx" firstAttribute="top" secondItem="e4j-eZ-zrK" secondAttribute="top" constant="5" id="CwO-gO-a1w"/>
+                        <constraint firstItem="cX2-nn-bBX" firstAttribute="centerY" secondItem="h8a-82-gjx" secondAttribute="centerY" id="G2t-Uj-t1w"/>
+                        <constraint firstAttribute="bottom" secondItem="h8a-82-gjx" secondAttribute="bottom" constant="5" id="NZZ-Nk-vgQ"/>
+                        <constraint firstAttribute="trailing" secondItem="cX2-nn-bBX" secondAttribute="trailing" constant="10" id="YN3-7d-9h0"/>
+                        <constraint firstItem="cX2-nn-bBX" firstAttribute="leading" secondItem="h8a-82-gjx" secondAttribute="trailing" constant="5" id="cyC-QV-bbU"/>
+                        <constraint firstAttribute="height" constant="40" id="kT7-gk-hSM"/>
+                        <constraint firstItem="cX2-nn-bBX" firstAttribute="top" secondItem="h8a-82-gjx" secondAttribute="top" id="mD2-TM-9ix"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OHh-vW-gQc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LrM-ur-MMJ"/>
+                <constraint firstAttribute="trailing" secondItem="e4j-eZ-zrK" secondAttribute="trailing" id="Rj9-L2-P2d"/>
+                <constraint firstAttribute="trailing" secondItem="OHh-vW-gQc" secondAttribute="trailing" id="VOi-JY-e5T"/>
+                <constraint firstAttribute="bottom" secondItem="e4j-eZ-zrK" secondAttribute="bottom" id="XUZ-mf-ZcL"/>
+                <constraint firstItem="OHh-vW-gQc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ifR-dk-HLX"/>
+                <constraint firstItem="e4j-eZ-zrK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zHe-rT-cX9"/>
+                <constraint firstAttribute="bottom" secondItem="OHh-vW-gQc" secondAttribute="bottom" constant="40" id="zaq-69-mDS"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

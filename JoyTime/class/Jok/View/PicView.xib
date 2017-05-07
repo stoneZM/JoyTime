@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PicView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-fF-iD4">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="zty-II-rkL">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                </imageView>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-3G-opE">
+                    <rect key="frame" x="0.0" y="136" width="320" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-aO-V3f" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="120.5" y="49.5" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="GbK-eu-Acy"/>
+                        <constraint firstAttribute="width" constant="80" id="ZBI-gF-GqW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zty-II-rkL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KLT-ID-vU4"/>
+                <constraint firstItem="Uwg-fF-iD4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N3m-sv-lBr"/>
+                <constraint firstItem="Rag-aO-V3f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VTm-Fz-oB6"/>
+                <constraint firstItem="zty-II-rkL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZmC-Vg-Rld"/>
+                <constraint firstAttribute="bottom" secondItem="6u7-3G-opE" secondAttribute="bottom" id="e24-Rc-uLa"/>
+                <constraint firstItem="Rag-aO-V3f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jQo-ZZ-Dww"/>
+                <constraint firstItem="Uwg-fF-iD4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kDn-tU-OFf"/>
+                <constraint firstAttribute="trailing" secondItem="6u7-3G-opE" secondAttribute="trailing" id="lVb-eV-iYG"/>
+                <constraint firstAttribute="bottom" secondItem="Uwg-fF-iD4" secondAttribute="bottom" id="nsv-oL-c4g"/>
+                <constraint firstAttribute="trailing" secondItem="Uwg-fF-iD4" secondAttribute="trailing" id="pgB-CB-BUs"/>
+                <constraint firstItem="6u7-3G-opE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sv5-lw-BZh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="Uwg-fF-iD4" id="7ZW-Wv-M9V"/>
+                <outlet property="isgifImageView" destination="zty-II-rkL" id="B8n-H8-Iu7"/>
+                <outlet property="lookBigPicBt" destination="6u7-3G-opE" id="gCK-BY-5Qb"/>
+                <outlet property="progressView" destination="Rag-aO-V3f" id="ybe-i4-5IM"/>
+            </connections>
+            <point key="canvasLocation" x="67" y="113.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

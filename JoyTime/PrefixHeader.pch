@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  JoyTime
+//
+//  Created by stone on 2017/1/11.
+//  Copyright © 2017年 stone. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "URL.h"
+#import "UIView+Extension.h"
+#import "StoreTool.h"
+#import "Constant.h"
+#import "UINavigationBar+Awesome.h"
+#import "Color.h"
+#import "UMShareTool.h"
+
+/********云信***********/
+
+#import "NIMSDK.h"
+#import "NIMAVChat.h"
+#import "NTESGlobalMacro.h"
+#import "NIMKit.h"
+
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+#ifdef DEBUG
+static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static DDLogLevel ddLogLevel = DDLogLevelInfo;
+#endif
+
+#define NTES_USE_CLEAR_BAR - (BOOL)useClearBar{return YES;}
+
+#define NTES_FORBID_INTERACTIVE_POP - (BOOL)forbidInteractivePop{return YES;}
+
+
+/**********************/
+
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import <SVProgressHUD.h>
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,44 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 13
+        },
+        "cap-insets" : {
+          "right" : 27,
+          "left" : 15
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "loginBtnBgClick.png",
+      "scale" : "1x"
+    },
+    {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 49
+        },
+        "cap-insets" : {
+          "right" : 27,
+          "left" : 34
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "loginBtnBgClick@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

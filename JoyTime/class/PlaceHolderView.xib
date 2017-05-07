@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendTrendsViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaceHolderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-a6-tgk">
+                    <rect key="frame" x="144" y="435" width="87" height="33"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="点我登录吧">
+                        <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="friendsTrend_login_click"/>
+                    <connections>
+                        <action selector="LoginBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZPg-pD-K7K"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQa-D8-L7r">
+                    <rect key="frame" x="81" y="266" width="214" height="135.5"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">未登录 ~~
+还不能查看关注的牛人
+   动态哦！！
+
+</string>
+                    <color key="textColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_error" translatesAutoresizingMaskIntoConstraints="NO" id="Zht-nt-V3V">
+                    <rect key="frame" x="128" y="154" width="119" height="119"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nGI-a6-tgk" firstAttribute="top" secondItem="QQa-D8-L7r" secondAttribute="bottom" constant="33" id="JLK-Ce-8NY"/>
+                <constraint firstItem="Zht-nt-V3V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bbB-99-wHG"/>
+                <constraint firstItem="QQa-D8-L7r" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cLE-Ns-nB2"/>
+                <constraint firstItem="nGI-a6-tgk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d1y-Yx-3Nm"/>
+                <constraint firstItem="QQa-D8-L7r" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eZ5-XU-XO4"/>
+                <constraint firstItem="Zht-nt-V3V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-120" id="fyb-6W-Oeh"/>
+            </constraints>
+            <point key="canvasLocation" x="78" y="197"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friendsTrend_login_click" width="243" height="48"/>
+        <image name="icon_error" width="119" height="119"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
